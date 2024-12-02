@@ -1,4 +1,6 @@
-@import 'styles/index';
+@use 'assets/util' as *;
+@import 'styles-pages/index';
+@import 'assets/index';
 
 * {
   box-sizing: border-box;
@@ -7,7 +9,7 @@
 }
 
 body {
-  background-color: #f0f0f0;
+  background-color: $white;
 }
 
 section {

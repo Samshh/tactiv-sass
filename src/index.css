@@ -4,7 +4,7 @@
 }
 
 #page1 section .section-small {
-  background-color: #d9d9d9;
+  background-color: #dddddd;
   padding: 1rem;
 }
 
@@ -17,6 +17,10 @@
 
 #page1 section .section-large {
   padding: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 * {
