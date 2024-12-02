@@ -6,8 +6,9 @@
     display: grid;
 
     .section-small {
-      background-color: #dddddd;
+      background-color: #e7e7e7;
       padding: 1rem;
+      @include init-flex(row, 1rem);
 
       .logo-placeholder {
         width: 50px;

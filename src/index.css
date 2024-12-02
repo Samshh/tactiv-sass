@@ -7,8 +7,13 @@
 }
 
 #page1 section .section-small {
-  background-color: #dddddd;
+  background-color: #e7e7e7;
   padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 #page1 section .section-small .logo-placeholder {
@@ -23,7 +28,23 @@
 }
 
 h1 {
+  font-size: 3.3rem;
+}
+
+h2 {
   font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+p {
+  font-size: 1.25rem;
 }
 
 * {
