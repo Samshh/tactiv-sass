@@ -1,4 +1,4 @@
-@use '../util' as *;
+@use "./util" as *;
 
 h1 {
   font-size: $text-h1-size;
@@ -16,6 +16,11 @@ h4 {
   font-size: $text-h4-size;
 }
 
+h5 {
+  font-size: $text-h5-size;
+}
+
 p {
   font-size: $text-p-size;
+  font-weight: 500;
 }

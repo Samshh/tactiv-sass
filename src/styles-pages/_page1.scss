@@ -1,4 +1,4 @@
-@use '../assets/util' as *;
+@use "../assets/util" as *;
 
 #page1 {
   section {
@@ -7,19 +7,33 @@
 
     .section-small {
       background-color: #e7e7e7;
-      padding: 1rem;
-      @include init-flex(row, 1rem);
+      padding: 2rem;
+      @include init-flex(column, 1rem, space-between);
 
-      .logo-placeholder {
-        width: 50px;
-        height: 50px;
-        background-color: $grey;
-        border-radius: 100px;
+      .main-small {
+        @include init-flex(column, 2rem);
+        .logo-placeholder {
+          width: 50px;
+          height: 50px;
+          background-color: $grey;
+          border-radius: 100px;
+        }
+
+        .small-text {
+          @include init-flex(column, 0.25rem);
+        }
+      }
+
+      .save {
+        color: $light-grey;
+        cursor: pointer;
+        -webkit-user-select: none;
+        user-select: none;
       }
     }
 
     .section-large {
-      padding: 1rem;
+      padding: 2rem;
     }
   }
 }

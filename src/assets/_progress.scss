@@ -1,0 +1,54 @@
+@use "./util" as *;
+
+@mixin init-circle($size: 1.25rem, $border-radius: 100px) {
+  border-radius: $border-radius;
+  height: $size;
+  width: $size;
+}
+
+.prgs {
+  position: relative;
+  @include init-flex(column, 1rem);
+
+  &-line {
+    z-index: 1;
+    width: 2px;
+    height: 90%;
+    background-color: #d7d7d7;
+    position: absolute;
+    top: 50%;
+    left: 4.5%;
+    transform: translateY(-50%);
+  }
+
+  .active-prgs,
+  .default-prgs {
+    z-index: 2;
+    @include init-flex(row, 0.5rem, center, center);
+  }
+
+  .active-circle,
+  .default-circle {
+    @include init-circle;
+  }
+
+  .active-prgs {
+    .active-circle {
+      @include init-flex(row, 0.5rem, center, center);
+      background-color: $black;
+
+      .small-circle {
+        @include init-circle(0.5rem, 100px);
+        background-color: $white;
+      }
+    }
+  }
+
+  .default-prgs {
+    color: $light-grey;
+
+    .default-circle {
+      @include gradient-radial($light-grey, #d7d7d7);
+    }
+  }
+}
