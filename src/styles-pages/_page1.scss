@@ -19,7 +19,7 @@
           border-radius: 100px;
         }
 
-        .small-text {
+        .text {
           @include init-flex(column, 0.25rem);
         }
       }
@@ -33,7 +33,43 @@
     }
 
     .section-large {
-      padding: 2rem;
+      padding: 6rem;
+      padding-top: 8rem;
+
+      .main-large {
+        @include init-flex(column, 1rem);
+
+        .text {
+          width: 100%;
+          @include init-flex(row, 1rem, space-between, center);
+
+          .clear {
+            color: $light-grey;
+            cursor: pointer;
+            text-decoration: underline;
+            -webkit-user-select: none;
+            user-select: none;
+          }
+        }
+
+        .filters {
+          width: 100%;
+          @include init-grid-columns(
+            repeat(4, 1fr),
+            1rem,
+            space-between,
+            center
+          );
+
+          .filter {
+
+          }
+
+          .search {
+            color: $white;
+          }
+        }
+      }
     }
   }
 }

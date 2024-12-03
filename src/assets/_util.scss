@@ -27,6 +27,32 @@ $text-p-size: 1rem;
   align-items: $align-items;
 }
 
+@mixin init-grid-columns(
+  $columns,
+  $gap: auto,
+  $justify-content: flex-start,
+  $align-items: start
+) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin init-grid-rows(
+  $rows,
+  $gap: auto,
+  $justify-content: flex-start,
+  $align-items: start
+) {
+  display: grid;
+  grid-template-rows: $rows;
+  gap: $gap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
 @mixin gradient-radial($color1, $color2) {
   background: linear-gradient($color1, $color2);
 }
