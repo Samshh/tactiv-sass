@@ -62,11 +62,26 @@
           );
 
           .filter {
+            background-color: #e7e7e7;
+            padding: 0.75rem;
+            border-radius: 10px;
+            @include init-flex(row, 1rem, space-between, center);
 
+            .filter-children {
+              @include init-flex(row, 0.5rem, center, center);
+            }
           }
 
           .search {
             color: $white;
+            padding: 0.75rem;
+            border-radius: 100px;
+            @include init-flex(row, 0.25rem, center, center);
+            @include gradient-radial($light-grey, #d7d7d7);
+
+            p {
+              font-weight: 400;
+            }
           }
         }
       }
