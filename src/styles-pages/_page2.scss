@@ -14,14 +14,6 @@
         .claims-nav {
           height: 50px;
           @include init-flex(row, 1rem, start, center);
-          p {
-            cursor: pointer;
-            color: $light-grey;
-          }
-
-          .active {
-            color: $black;
-          }
         }
 
         .claims-main {

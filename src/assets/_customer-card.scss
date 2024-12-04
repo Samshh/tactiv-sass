@@ -13,10 +13,6 @@
     .customer-details {
       @include init-flex(row, 1rem, start, center);
 
-      .customer-icon {
-        @include init-icon();
-      }
-
       .customer-id {
         color: $light-grey;
       }

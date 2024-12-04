@@ -2,14 +2,35 @@
 
 // general style
 .claims-btn,
-.card-btn {
+.card-btn,
+.table-btn,
+.ghost-btn,
+.ghost-btn-active {
   cursor: pointer;
+  border: none;
   -webkit-user-select: none;
   user-select: none;
   @include init-flex(row, auto, center, center);
+  font-size: $text-p-size;
 }
 
-// claims-btn
+// ghost
+.ghost-btn {
+  background-color: transparent;
+  color: $light-grey;
+}
+
+.ghost-btn:hover {
+  color: $black;
+  border-bottom: 2px $black solid;
+}
+
+.ghost-btn-active {
+  color: $black;
+  border-bottom: 2px $black solid;
+}
+
+// claims
 .claims-btn {
   padding: 0.5rem;
   padding-left: 1.5rem;
@@ -19,7 +40,7 @@
   color: $white;
 }
 
-// customer-card-btn
+// customer-card
 .card-btn {
   padding: 0.5rem;
   width: 100%;
@@ -34,4 +55,24 @@
 .card-inactive-btn {
   background-color: $inactive-bg;
   border: 1px $border solid;
+}
+
+.card-inactive-btn:hover {
+  color: $white;
+  background-color: $black;
+  border: 1px $black solid;
+}
+
+// table
+.table-btn {
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 5px;
+  @include init-box-shadow();
+}
+
+.table-btn:hover {
+  color: $white;
+  background-color: $black;
 }

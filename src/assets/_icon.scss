@@ -1,0 +1,14 @@
+@use "./util" as *;
+
+.logo-placeholder {
+  background-color: $grey;
+  @include init-icon(50px);
+}
+
+.icon-user {
+  @include init-icon();
+}
+
+.icon-empty {
+  @include init-icon();
+}
