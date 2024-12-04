@@ -1,5 +1,47 @@
-@use '../assets/util' as *;
+@use "../assets/util" as *;
 
 #page2 {
-  
+  section {
+    padding: 2rem;
+    @include init-flex(column, 2rem);
+    @include init-section();
+
+    .upper-section {
+      width: 100%;
+      @include init-grid-columns(1fr 3.5fr 2fr, 2rem);
+
+      .claims-section {
+        .claims-nav {
+          height: 50px;
+          @include init-flex(row, 1rem, start, center);
+          p {
+            cursor: pointer;
+            color: $light-grey;
+          }
+
+          .active {
+            color: $black;
+          }
+        }
+
+        .claims-main {
+          padding-top: 4rem;
+          padding-bottom: 4rem;
+        }
+      }
+      .claims-profile {
+        height: 50px;
+        @include init-flex(row, 3.5rem, end, center);
+        .user-info {
+          @include init-flex(row, 0.75rem, start, center);
+          .claims-icon {
+            @include init-icon();
+          }
+          .claims-title {
+            color: $light-grey;
+          }
+        }
+      }
+    }
+  }
 }

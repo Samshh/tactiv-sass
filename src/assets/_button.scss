@@ -1,4 +1,36 @@
 @use "./util" as *;
 
-.btn {
+// general style
+.claims-btn,
+.card-btn {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  @include init-flex(row, auto, center, center);
+}
+
+// claims-btn
+.claims-btn {
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: $black;
+  border-radius: 100px;
+  color: $white;
+}
+
+// customer-card-btn
+.card-btn {
+  padding: 0.5rem;
+}
+
+.card-active-btn {
+  color: $white;
+  background-color: $black;
+  border: 1px $black solid;
+}
+
+.card-inactive-btn {
+  background-color: $inactive-bg;
+  border: 1px $border solid;
 }

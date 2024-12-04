@@ -2,7 +2,6 @@
 
 .customer-card {
   width: 100%;
-  height: 100%;
   border-radius: 12px;
   overflow: hidden;
   @include init-box-shadow();
@@ -15,9 +14,7 @@
       @include init-flex(row, 1rem, start, center);
 
       .customer-icon {
-        width: 40px;
-        height: 40px;
-        border-radius: 40px;
+        @include init-icon();
       }
 
       .customer-id {
@@ -63,21 +60,5 @@
       width: 100%;
       @include init-flex(column, 1rem);
     }
-  }
-
-  .card-btn {
-    padding: 0.5rem;
-    @include init-flex(row, auto, center, center);
-  }
-
-  .card-active-btn {
-    color: $white;
-    background-color: $black;
-    border: 1px $black solid;
-  }
-
-  .card-inactive-btn {
-    background-color: $inactive-bg;
-    border: 1px $border solid;
   }
 }

@@ -71,6 +71,12 @@ $text-label-size: 0.75rem;
   margin: 0 auto;
 }
 
+@mixin init-icon($size: 40px) {
+  width: $size;
+  height: $size;
+  border-radius: $size;
+}
+
 @mixin gradient-radial($color1, $color2) {
   background: linear-gradient($color1, $color2);
 }

@@ -13,12 +13,6 @@
 
       .main-small {
         @include init-flex(column, 2rem);
-        .logo-placeholder {
-          width: 50px;
-          height: 50px;
-          background-color: $grey;
-          border-radius: 100px;
-        }
 
         .text {
           @include init-flex(column, 0.25rem);
@@ -63,9 +57,11 @@
             space-between,
             center
           );
+          @include init-grid-rows(1fr, auto, center, center);
 
           .filter {
             background-color: $bg-dim;
+            height: 100%;
             padding: 0.75rem;
             border-radius: 10px;
             @include init-flex(row, 1rem, space-between, center);
@@ -96,7 +92,6 @@
         .cards-grid {
           width: 100%;
           @include init-grid-columns(repeat(2, 1fr), 1.5rem);
-          @include init-grid-rows(1fr);
         }
       }
     }
