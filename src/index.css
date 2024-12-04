@@ -2,6 +2,10 @@
 #page1 section {
   grid-template-columns: 1fr 3fr;
   display: grid;
+  min-height: 100vh;
+  height: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 #page1 section .section-small {
@@ -48,9 +52,15 @@
 #page1 section .section-large {
   padding: 6rem;
   padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 #page1 section .section-large .main-large {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -120,6 +130,29 @@
   font-weight: 400;
 }
 
+#page1 section .section-large .cards-large {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#page1 section .section-large .cards-large .cards-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  justify-content: flex-start;
+  align-items: start;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: auto;
+  justify-content: flex-start;
+  align-items: start;
+}
+
 h1 {
   font-size: 3.3rem;
 }
@@ -142,7 +175,6 @@ h5 {
 
 p {
   font-size: 1rem;
-  font-weight: 500;
 }
 
 .prgs {
@@ -206,6 +238,112 @@ p {
   background: linear-gradient(#959595, #d7d7d7);
 }
 
+.customer-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 2.5px rgba(0, 0, 0, 0.2);
+}
+
+.customer-card .upper-card {
+  border-bottom: 1px #d7d7d7 solid;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.customer-card .upper-card .customer-details {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: start;
+  align-items: center;
+}
+
+.customer-card .upper-card .customer-details .customer-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+
+.customer-card .upper-card .customer-details .customer-id {
+  color: #959595;
+}
+
+.customer-card .upper-card .customer-status .active {
+  color: #098800;
+  background-color: rgba(13, 182, 1, 0.2549019608);
+}
+
+.customer-card .upper-card .customer-status p {
+  font-size: 0.75rem;
+}
+
+.customer-card .upper-card .customer-status .default {
+  color: #535353;
+  background-color: rgba(149, 149, 149, 0.1254901961);
+}
+
+.customer-card .upper-card .customer-status .active,
+.customer-card .upper-card .customer-status .default {
+  border-radius: 100px;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer-card .lower-card {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: start;
+}
+
+.customer-card .lower-card .label {
+  color: #959595;
+  font-size: 0.75rem;
+}
+
+.customer-card .lower-card .lower-data {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.customer-card .card-btn {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer-card .card-active-btn {
+  color: #f0f0f0;
+  background-color: #161616;
+  border: 1px #161616 solid;
+}
+
+.customer-card .card-inactive-btn {
+  background-color: rgba(149, 149, 149, 0.1254901961);
+  border: 1px #d7d7d7 solid;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -216,16 +354,4 @@ p {
 body {
   background-color: #f0f0f0;
   color: #161616;
-}
-
-#icon {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-section {
-  min-height: 100vh;
-  height: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
 }/*# sourceMappingURL=index.css.map */

@@ -14,7 +14,7 @@
     z-index: 1;
     width: 2px;
     height: 90%;
-    background-color: #d7d7d7;
+    background-color: $border;
     position: absolute;
     top: 50%;
     left: 4.5%;
@@ -48,7 +48,7 @@
     color: $light-grey;
 
     .default-circle {
-      @include gradient-radial($light-grey, #d7d7d7);
+      @include gradient-radial($light-grey, $border);
     }
   }
 }

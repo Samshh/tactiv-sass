@@ -1,0 +1,83 @@
+@use "./util" as *;
+
+.customer-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  @include init-box-shadow();
+
+  .upper-card {
+    border-bottom: 1px $border solid;
+    padding: 1rem;
+    @include init-flex(row, 1rem, space-between);
+    .customer-details {
+      @include init-flex(row, 1rem, start, center);
+
+      .customer-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+      }
+
+      .customer-id {
+        color: $light-grey;
+      }
+    }
+    .customer-status {
+      .active {
+        color: $active-text;
+        background-color: $active-bg;
+      }
+
+      p {
+        font-size: $text-label-size;
+      }
+
+      .default {
+        color: $inactive-text;
+        background-color: $inactive-bg;
+      }
+
+      .active,
+      .default {
+        border-radius: 100px;
+        padding: 0.25rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        @include init-flex(row, auto, center, center);
+      }
+    }
+  }
+
+  .lower-card {
+    padding: 1rem;
+    @include init-grid-columns(repeat(2, 1fr), 1rem);
+
+    .label {
+      color: $light-grey;
+      font-size: $text-label-size;
+    }
+
+    .lower-data {
+      width: 100%;
+      @include init-flex(column, 1rem);
+    }
+  }
+
+  .card-btn {
+    padding: 0.5rem;
+    @include init-flex(row, auto, center, center);
+  }
+
+  .card-active-btn {
+    color: $white;
+    background-color: $black;
+    border: 1px $black solid;
+  }
+
+  .card-inactive-btn {
+    background-color: $inactive-bg;
+    border: 1px $border solid;
+  }
+}
