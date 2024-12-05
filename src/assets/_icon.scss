@@ -16,6 +16,10 @@
   @include init-icon(25px);
 }
 
+.table-btn-icon {
+  @include init-icon(18px);
+}
+
 .table-empty-icon {
   color: $light-grey;
   font-size: $text-p-size;

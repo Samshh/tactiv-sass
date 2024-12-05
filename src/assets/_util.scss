@@ -64,10 +64,10 @@ $text-label-size: 0.75rem;
   align-items: $align-items;
 }
 
-@mixin init-section() {
+@mixin init-section($max-width: 1600px) {
   min-height: 100vh;
   height: 100%;
-  max-width: 1600px;
+  max-width: $max-width;
   margin: 0 auto;
 }
 

@@ -1,5 +1,40 @@
-@use '../assets/util' as *;
+@use "../assets/util" as *;
 
 #page3 {
-  
+  section {
+    padding: 2rem;
+    @include init-section(900px);
+    @include init-flex(column, 1rem, start, center);
+
+    .accordion {
+      padding: 1rem;
+      width: 100%;
+      background-color: $bg-dim;
+      border-radius: 10px;
+      @include init-box-shadow();
+      @include init-flex(column, 1rem, start, center);
+      .accordion-heading {
+        width: 100%;
+        @include init-flex(row, 1rem, space-between, center);
+
+        div {
+          @include init-flex(row, 0.5rem, start, center);
+
+          .price {
+            color: $light-grey;
+          }
+        }
+      }
+
+      .accordion-separator {
+        width: 100%;
+        height: 1px;
+        background-color: $border;
+      }
+
+      .accordion-content {
+        width: 100%;
+      }
+    }
+  }
 }

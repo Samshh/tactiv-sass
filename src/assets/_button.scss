@@ -5,7 +5,8 @@
 .card-btn,
 .table-btn,
 .ghost-btn,
-.ghost-btn-active {
+.ghost-btn-active,
+.accordion-btn {
   cursor: pointer;
   border: none;
   -webkit-user-select: none;
@@ -69,10 +70,23 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   border-radius: 5px;
+  border: 1px $white solid;
   @include init-box-shadow();
+  @include init-flex(row, 0.25rem, center, center);
 }
 
 .table-btn:hover {
-  color: $white;
-  background-color: $black;
+  border: 1px $black solid;
+}
+
+// accordion
+.accordion-btn {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px $border solid;
+
+  img {
+    width: 1rem;
+    height: 1rem;
+  }
 }
