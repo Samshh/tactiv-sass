@@ -1,14 +1,25 @@
 @use "./util" as *;
 
+// logo
 .logo-placeholder {
   background-color: $grey;
   @include init-icon(50px);
 }
 
+// general user
 .icon-user {
   @include init-icon();
 }
 
-.icon-empty {
-  @include init-icon();
+//table
+.table-icon {
+  @include init-icon(25px);
+}
+
+.table-empty-icon {
+  color: $light-grey;
+  font-size: $text-p-size;
+  background-color: $bg-dim;
+  @include init-icon(25px);
+  @include init-flex(row, auto, center, center);
 }

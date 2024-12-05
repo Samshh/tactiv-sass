@@ -35,5 +35,9 @@
         }
       }
     }
+    .amount, .price {
+      @include init-flex(column, auto, center, end);
+      text-align: end;
+    }
   }
 }
