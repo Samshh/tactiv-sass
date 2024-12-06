@@ -220,60 +220,47 @@
 }
 
 #page3 section {
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   min-height: 100vh;
   height: 100%;
   max-width: 900px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: start;
   align-items: center;
 }
 
-#page3 section .accordion {
-  padding: 1rem;
-  width: 100%;
-  background-color: #e7e7e7;
-  border-radius: 10px;
-  box-shadow: 0 0 2.5px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: start;
-  align-items: center;
-}
-
-#page3 section .accordion .accordion-heading {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#page3 section .accordion .accordion-heading div {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  justify-content: start;
-  align-items: center;
-}
-
-#page3 section .accordion .accordion-heading div .price {
+#page3 section .price {
   color: #959595;
 }
 
-#page3 section .accordion .accordion-separator {
+#page3 section .details {
+  background-color: #e7e7e7;
   width: 100%;
-  height: 1px;
-  background-color: #d7d7d7;
+  padding: 1rem;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: start;
+  justify-content: start;
+  align-items: start;
 }
 
-#page3 section .accordion .accordion-content {
+#page3 section .accordion-table {
   width: 100%;
+  background-color: #f0f0f0;
+  padding: 1rem;
+}
+
+#page3 section .accordion-table .part-name {
+  width: 200%;
+}
+
+#page3 section .accordion-table .labor-description {
+  width: 300%;
 }
 
 .claims-btn,
@@ -695,6 +682,71 @@ p {
   gap: auto;
   justify-content: center;
   align-items: center;
+}
+
+.accordion {
+  padding: 1rem;
+  width: 100%;
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  box-shadow: 0 0 2.5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: start;
+  align-items: center;
+}
+
+.accordion .accordion-heading {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion .accordion-heading div {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: start;
+  align-items: center;
+}
+
+.accordion .accordion-separator {
+  width: 100%;
+  height: 1px;
+  background-color: #d7d7d7;
+}
+
+.accordion .accordion-content {
+  width: 100%;
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  border: 1px solid #d7d7d7;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: auto;
+  justify-content: start;
+  align-items: start;
+}
+
+.accordion .accordion-content .inner-accordion-heading {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-bottom: 1px solid #d7d7d7;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: start;
+  align-items: center;
+}
+
+.accordion .accordion-content .inner-accordion-heading .price {
+  color: #959595;
 }
 
 * {

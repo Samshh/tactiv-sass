@@ -2,38 +2,34 @@
 
 #page3 {
   section {
-    padding: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     @include init-section(900px);
-    @include init-flex(column, 1rem, start, center);
+    @include init-flex(column, 1.5rem, start, center);
 
-    .accordion {
-      padding: 1rem;
-      width: 100%;
+    .price {
+      color: $light-grey;
+    }
+
+    .details {
       background-color: $bg-dim;
-      border-radius: 10px;
-      @include init-box-shadow();
-      @include init-flex(column, 1rem, start, center);
-      .accordion-heading {
-        width: 100%;
-        @include init-flex(row, 1rem, space-between, center);
+      width: 100%;
+      padding: 1rem;
+      font-size: $text-label-size;
+      @include init-flex(column, start, start, start);
+    }
 
-        div {
-          @include init-flex(row, 0.5rem, start, center);
+    .accordion-table {
+      width: 100%;
+      background-color: $white;
+      padding: 1rem;
 
-          .price {
-            color: $light-grey;
-          }
-        }
+      .part-name {
+        width: 200%;
       }
 
-      .accordion-separator {
-        width: 100%;
-        height: 1px;
-        background-color: $border;
-      }
-
-      .accordion-content {
-        width: 100%;
+      .labor-description {
+        width: 300%;
       }
     }
   }
